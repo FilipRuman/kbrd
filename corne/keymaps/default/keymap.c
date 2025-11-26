@@ -47,17 +47,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         [_SYMB] = LAYOUT(
                 //left
-                _______,_______,KC_9,_______,
-                _______,KC_NONUS_HASH,KC_0,_______,
-                _______,KC_LEFT_BRACKET,KC_1,_______,
-                KC_LEFT_BRACKET,KC_2,_______,
-                _______,_______,KC_3,
+                _______,        _______,        KC_9,   _______,
+                _______,        KC_NONUS_HASH,  KC_0,   _______,
+                _______,        KC_LEFT_BRACKET,KC_1,   _______,
+                                KC_LEFT_BRACKET,KC_2,   _______,
+                                _______,        KC_3,KC_3,
                 //right
-                _______,KC_MINUS,KC_4,_______,
-                _______,KC_EQUAL,KC_5,_______,
-                _______,KC_BACKSLASH,KC_6,_______,
-                _______,KC_7,_______,
-                _______,KC_8,QK_BOOT
+                _______,    KC_MINUS,       KC_4,   _______,
+                _______,    KC_EQUAL,       KC_5,   _______,
+                _______,    KC_BACKSLASH,   KC_6,   _______,
+                        _______,            KC_7,   _______,
+                        _______,            KC_8,   QK_BOOT
 
         )
 
