@@ -1,6 +1,5 @@
 #pragma once
 #define EE_HANDS
-#define SOFT_SERIAL_PIN D1
 #define DEBUG
 #define MATRIX_DEBUG
 #define SPLIT_USB_DETECT

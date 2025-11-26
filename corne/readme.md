@@ -2,26 +2,8 @@
 
 ![fr/corne](imgur.com image replace me!)
 
-*A short description of the keyboard/project*
+comman: `qmk flash -kb fr/corne -km default -bl avrdude-split-left`
+and replace the split left to right when flashing for the right keyboard half
 
-* Keyboard Maintainer: [FR](https://github.com/FR)
-* Hardware Supported: *The PCBs, controllers supported*
-* Hardware Availability: *Links to where you can find this hardware*
-
-Make example for this keyboard (after setting up your build environment):
-
-    make fr/corne:default
-
-Flashing example for this keyboard:
-
-    make fr/corne:default:flash
-
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
-
-## Bootloader
-
-Enter the bootloader in 3 ways:
-
-* **Bootmagic reset**: Hold down the key at (0,0) in the matrix (usually the top left key or Escape) and plug in the keyboard
-* **Physical reset button**: Briefly press the button on the back of the PCB - some may have pads you must short instead
-* **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available
+How to flash the firmware- hold the first key(the switch that is in the thumb cluster and isn't under any of the rows)
+while the microcontroller is booting(right after plugging it in)
