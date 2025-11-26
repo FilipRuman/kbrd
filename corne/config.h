@@ -1,0 +1,10 @@
+#pragma once
+#define EE_HANDS
+#define SOFT_SERIAL_PIN D1
+#define DEBUG
+#define MATRIX_DEBUG
+#define SPLIT_USB_DETECT
+#define SPLIT_TRANSPORT_SERIAL
+#define MASTER_LEFT
+#define USE_SERIAL_PD2
+#define USB_SUSPEND_WAKEUP_DELAY 0
