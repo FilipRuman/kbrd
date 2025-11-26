@@ -9,8 +9,6 @@ _FUNC,
 _SYMB,
 _MS
 };
-
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         [_BASE] = LAYOUT(
@@ -57,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                 //right
                 _______,    KC_MINUS,       KC_4,   _______,
                 _______,    KC_EQUAL,       KC_5,   _______,
-                _______,    KC_BACKSLASH,   KC_6,   _______,
+                _______,    KC_BACKSLASH,   KC_6,   KC_QUOT ,
                         _______,            KC_7,   _______,
                         _______,            KC_8,   QK_BOOT
 
@@ -82,9 +80,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 void keyboard_post_init_user(void) {
   // Customise these values to desired behaviour
-  debug_enable=true;
-  debug_matrix=true;
-    print("string");
+   debug_enable=true;
+  // debug_matrix=true;
+    // print("string");
   //debug_keyboard=true;
   //debug_mouse=true;
 }

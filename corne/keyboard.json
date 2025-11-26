@@ -20,9 +20,7 @@
     "features": {
         "bootmagic": true,
         "extrakey": true,
-        "mousekey": true,
         "console": true,
-matrix_debug: true,
         "nkro": true,
     },
   "diode_direction": "ROW2COL",

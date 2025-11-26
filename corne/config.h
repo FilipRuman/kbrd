@@ -1,7 +1,6 @@
 #pragma once
 #define EE_HANDS
 #define DEBUG
-#define MATRIX_DEBUG
 #define SPLIT_USB_DETECT
 #define SPLIT_TRANSPORT_SERIAL
 #define MASTER_LEFT
