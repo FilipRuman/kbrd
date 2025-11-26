@@ -6,7 +6,8 @@
 enum _layers {
 _BASE,
 _FUNC,
-_SYMB
+_SYMB,
+_MS
 };
 
 
@@ -18,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                  LT(_SYMB, KC_SPC),            KC_X,   KC_S, KC_W,
                  LGUI_T(KC_ENTER), KC_C,   KC_D, KC_E,
                             KC_V,   KC_F, KC_R,
-                            KC_B,   KC_G, KC_T,
+                            KC_B,   KC_G, LT(_MS, KC_T),
                  //right
                  RALT_T(KC_ESC),              KC_N,       KC_H,         KC_Y,
                  LSFT_T(KC_DEL),   KC_M,       KC_J,         KC_U,
@@ -45,6 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ),
 
 
+
         [_SYMB] = LAYOUT(
                 //left
                 _______,        _______,        KC_9,   _______,
@@ -58,6 +60,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                 _______,    KC_BACKSLASH,   KC_6,   _______,
                         _______,            KC_7,   _______,
                         _______,            KC_8,   QK_BOOT
+
+        ),
+
+        [_MS] = LAYOUT(
+                //left
+                _______,        _______,        _______,   _______,
+                _______,        _______,  _______,   _______,
+                _______,        _______,_______,   _______,
+                                _______,_______,   _______,
+                                _______,        _______,_______,
+                //right
+                _______,MS_BTN1,MS_LEFT,   _______,
+                _______,MS_BTN2,MS_DOWN,  _______,
+                _______,_______,MS_UP,  _______,
+                        _______,MS_RGHT,   _______,
+                        _______,_______,_______
 
         )
 
