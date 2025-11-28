@@ -13,15 +13,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         [_BASE] = LAYOUT(
                  //left
-                 LCTL_T(KC_F2),   KC_Z,   KC_A, KC_Q,
-                 LT(_SYMB, KC_SPC),            KC_X,   KC_S, KC_W,
+                 LT(_SYMB, KC_SPC),   KC_Z,   KC_A, KC_Q,
+                 LCTL_T(KC_F2),            KC_X,   KC_S, KC_W,
                  LGUI_T(KC_ENTER), KC_C,   KC_D, KC_E,
                             KC_V,   KC_F, KC_R,
                             KC_B,   KC_G, LT(_MS, KC_T),
                  //right
                  RALT_T(KC_ESC),              KC_N,       KC_H,         KC_Y,
-                 LSFT_T(KC_DEL),   KC_M,       KC_J,         KC_U,
-                 LT(_FUNC, KC_BSPC),              KC_COMMA,     KC_K,         KC_I,
+                 LT(_FUNC, KC_DEL),   KC_M,       KC_J,         KC_U,
+                 LSFT_T( KC_BSPC),              KC_COMMA,     KC_K,         KC_I,
                                        KC_DOT,   KC_L, KC_O,
                                        KC_SLASH,   KC_SEMICOLON,      KC_P
         ),
@@ -49,13 +49,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                 //left
                 _______,        _______,        KC_9,   _______,
                 _______,        KC_NONUS_HASH,  KC_0,   _______,
-                _______,        KC_LEFT_BRACKET,KC_1,   _______,
-                                KC_LEFT_BRACKET,KC_2,   _______,
-                                _______,        KC_3,KC_3,
+                _______,        KC_LEFT_BRACKET,KC_1,   KC_QUOT,
+                                KC_RIGHT_BRACKET,KC_2,   _______,
+                                _______,        KC_3,   _______,
                 //right
-                _______,    KC_MINUS,       KC_4,   _______,
-                _______,    KC_EQUAL,       KC_5,   _______,
-                _______,    KC_BACKSLASH,   KC_6,   KC_QUOT ,
+                _______,    KC_MINUS,       KC_4,   KC_GRV,
+                _______,    KC_EQUAL,       KC_5,   KC_ASTR,
+                _______,    KC_BACKSLASH,   KC_6,   _______,
                         _______,            KC_7,   _______,
                         _______,            KC_8,   QK_BOOT
 
