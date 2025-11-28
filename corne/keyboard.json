@@ -19,9 +19,6 @@
     },
     "features": {
         "bootmagic": true,
-        "extrakey": true,
-        "console": true,
-        "nkro": true,
     },
   "diode_direction": "ROW2COL",
 
