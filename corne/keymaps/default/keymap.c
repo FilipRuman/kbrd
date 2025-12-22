@@ -9,18 +9,21 @@ _FUNC,
 _SYMB,
 _MS
 };
+
+
+// Tap Dance definitions
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT(
         // left
-        LT(_SYMB, KC_SPC),  KC_Z,       KC_A,        KC_Q,
+        LT(_SYMB, KC_ENTER),  KC_Z,      KC_A ,        KC_Q,
         LCTL_T(KC_F2),      KC_X,       KC_S,        KC_W,
-        LGUI_T(KC_ENTER),   KC_C,       KC_D,        KC_E,
-                            KC_V,       KC_F,        KC_R,
-                            KC_B,       KC_G,        LT(_MS, KC_T),
+        LGUI_T(KC_DEL),   KC_C,       KC_D,        KC_E,
+                            KC_V,   KC_F,        KC_R,
+                            KC_B,       RALT_T(KC_G),        LT(_MS, KC_T),
 
         // right
-        RALT_T(KC_ESC),     KC_N,       KC_H,        KC_Y,
-        LT(_FUNC, KC_DEL),  KC_M,       KC_J,        KC_U,
+        KC_ESC,     KC_N,       KC_H,        KC_Y,
+        LT(_FUNC, KC_SPC),  KC_M,       LCTL_T(KC_J),        KC_U,
         LSFT_T(KC_BSPC),    KC_COMMA,   KC_K,        KC_I,
                             KC_DOT,     KC_L,        KC_O,
                             KC_SLASH,   KC_SEMICOLON,KC_P
@@ -31,18 +34,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // left
         _______,            KC_MEDIA_NEXT_TRACK, KC_AUDIO_MUTE,      XXXXXXX,
         _______,            KC_AUDIO_VOL_DOWN,   KC_AUDIO_VOL_UP,    XXXXXXX,
-        _______,            KC_BRIGHTNESS_DOWN,  KC_MEDIA_PLAY_PAUSE,XXXXXXX,
+        _______,            KC_BRIGHTNESS_DOWN,  KC_MEDIA_PLAY_PAUSE,KC_PLUS,
                             KC_BRIGHTNESS_DOWN,  KC_TAB,             KC_UNDS,
                             XXXXXXX,             XXXXXXX,            XXXXXXX,
 
         // right
-        _______,            XXXXXXX,             KC_LEFT,            XXXXXXX,
+        _______,            XXXXXXX,             KC_LEFT,            QK_BOOT,
         _______,            KC_NONUS_HASH,       KC_DOWN,            KC_MINUS,
         _______,            XXXXXXX,             KC_UP,              KC_EQUAL,
                             XXXXXXX,             KC_RIGHT,           XXXXXXX,
-                            XXXXXXX,             XXXXXXX,            QK_BOOT
+                            XXXXXXX,             XXXXXXX,            KC_PSCR
     ),
-
 
     [_SYMB] = LAYOUT(
         // left
