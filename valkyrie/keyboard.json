@@ -1,3 +1,6 @@
+// USED PINS:
+// MOUSE: 15 16 14 10 8 2
+// Keys: 6 A0 3 5 7, 9 A1 A2 A3
 {
   "keyboard_name": "fr/valkyrie",
   "manufacturer": "FR",
@@ -7,10 +10,11 @@
   "bootloader": "caterina",
   "diode_direction": "ROW2COL",
 
+
     "matrix_pins": {
 
         "cols": ["D7","F7","D0","C6","E6"],
-        "rows": ["B5", "B2","F5","F4"]
+        "rows": ["B5", "F6","F5","F4"]
     },
     "usb": {
         "device_version": "1.0.0",

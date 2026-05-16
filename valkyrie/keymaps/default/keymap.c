@@ -28,3 +28,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     uprintf("KL: kc: 0x%04X, col: %2u, row: %2u, pressed: %u, time: %5u, int: %u, count: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.time, record->tap.interrupted, record->tap.count);
     return true;
 }
+
+void pointing_device_init_kb(void) {
+    pmw33xx_init(0);
+    pmw33xx_set_cpi(0, 800);
+    pointing_device_init_user();
+}
+
+// Contains report from sensor #0 already, need to merge in from sensor #1
+report_mouse_t pointing_device_task_kb(report_mouse_t mouse_report) {
+    // From quantum/pointing_device_drivers.c
+#define constrain_hid(amt) ((amt) < -127 ? -127 : ((amt) > 127 ? 127 : (amt)))
+
+    dprintln("POINTING\n");
+    mouse_report.x = constrain_hid(mouse_report.x);
+    mouse_report.y = constrain_hid(mouse_report.y);
+
+    return pointing_device_task_user(mouse_report);
+}
