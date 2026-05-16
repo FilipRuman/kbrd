@@ -9,12 +9,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {[_BASE] = LAYOUT(K
 void keyboard_post_init_user(void) {
     debug_enable = true;
     debug_matrix = true;
-
-    uint8_t pid = pmw33xx_read(0, REG_Product_ID);
-
-    uprintf("PID: %02X\n", pid);
-
-    debug_matrix = true;
     print("boot\n");
     dprintln("boot\n");
     uprintln("boot\n");
@@ -25,15 +19,16 @@ void matrix_scan_user(void) {
     static uint32_t t;
 
     if (timer_elapsed32(t) > 1000) {
-        uint8_t pid = pmw33xx_read(0, REG_Product_ID);
+        // uint8_t pid = pmw33xx_read(0, REG_Product_ID);
 
-        uprintf("PID: %02X\n", pid);
+        // uprintf("PID: %02X\n", pid);
+        //
 
-        int16_t x = pmw33xx_read_burst(0).dx;
-        int16_t y = pmw33xx_read_burst(0).dy;
-        if (x || y) {
-            uprintf("RAW x:%d y:%d\n", x, y);
-        }
+        // int16_t x = pmw33xx_read_burst(0).dx;
+        // int16_t y = pmw33xx_read_burst(0).dy;
+        // if (x || y) {
+        //     uprintf("RAW x:%d y:%d\n", x, y);
+        // }
 
         t = timer_read32();
         dprintln("alive\n");
@@ -45,11 +40,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
-report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
-    dprintln("POINTING\n");
-    if (mouse_report.x || mouse_report.y) {
-        uprintf("x:%d y:%d\n", mouse_report.x, mouse_report.y);
-    }
-
-    return mouse_report;
-}
+// report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
+//     dprintln("POINTING\n");
+//     if (mouse_report.x || mouse_report.y) {
+//         uprintf("x:%d y:%d\n", mouse_report.x, mouse_report.y);
+//     }
+//
+//     return mouse_report;
+// }
