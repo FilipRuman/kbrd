@@ -12,25 +12,24 @@
 
 // PMW33xx sensor configuration
 
-// // Chip select on Pro Micro pin "9" (PB5)
-// #define PMW33XX_CS_PIN B5
-//
-// // Optional reset pin on Pro Micro pin "8" (PB4)
-// #define PMW33XX_RESET_PIN B4
-//
-// // Motion interrupt on Pro Micro pin "3" (PD1)
-// #define PMW33XX_MOTION_PIN D0
-//
-// // Hardware SPI pins on ATmega32U4
-// #define SPI_SCK_PIN B1
-// #define SPI_MOSI_PIN B2
-// #define SPI_MISO_PIN B3
-//
-// // Conservative SPI speed for bring-up/debugging
-// #define PMW33XX_SPI_DIVISOR 64
-//
-// // Default CPI
-// #define PMW33XX_CPI 800
-//
-// // Debug
-// #define POINTING_DEVICE_DEBUG
+#define PMW33XX_CS_PIN GP13
+
+#define PMW33XX_RESET_PIN GP9
+
+#define PMW33XX_MOTION_PIN GP12
+
+#define SPI_SCK_PIN GP10
+#define SPI_MOSI_PIN GP11
+#define SPI_MISO_PIN GP8
+
+// Conservative SPI speed for bring-up/debugging
+#define PMW33XX_SPI_DIVISOR 256
+
+#define RP_SPI_USE_SPI0 TRUE
+#define RP_SPI_USE_SPI1 FALSE
+
+// Default CPI
+#define PMW33XX_CPI 800
+
+// Debug
+#define POINTING_DEVICE_DEBUG
