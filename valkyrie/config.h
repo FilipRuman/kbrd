@@ -1,6 +1,15 @@
 #pragma once
 #define TAPPING_TERM 175
 #define TAPPING_TERM_PER_KEY
+
+#define EE_HANDS
+// #define DEBUG
+#define SPLIT_USB_DETECT
+#define SPLIT_TRANSPORT_SERIAL
+#define MASTER_LEFT
+#define USE_SERIAL_PD2
+#define USB_SUSPEND_WAKEUP_DELAY 0
+
 // PMW33xx sensor configuration
 
 // // Chip select on Pro Micro pin "9" (PB5)
