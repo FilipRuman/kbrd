@@ -1,10 +1,26 @@
-#include QMK_KEYBOARD_H
-#include "print.h"
 
-enum _layers { _BASE };
+#include "print.h"
+#include QMK_KEYBOARD_H
+
+
+
+enum _layers {
+_BASE,
+_FUNC,
+_SYMB,
+_MS
+};
+
 
 // Tap Dance definitions
-const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {[_BASE] = LAYOUT(KC_Z, KC_A, KC_Q, LCTL_T(KC_F2), KC_X, KC_X, KC_S, KC_W, LGUI_T(KC_DEL), KC_C, KC_D, KC_E, KC_V, KC_F, KC_R, KC_B, RALT_T(KC_G), KC_F)};
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+    [_BASE] = LAYOUT(
+        // left
+        LT(_SYMB, KC_ENTER),  KC_Z,      KC_A ,        KC_Q,
+        LCTL_T(KC_F2),      KC_X,       KC_S,        KC_W,
+        LGUI_T(KC_DEL),   KC_C,       KC_D,        KC_E,
+                            KC_V,   KC_F,        KC_R,
+                            KC_B,       RALT_T(KC_G),        LT(_MS, KC_T),
 
 void keyboard_post_init_user(void) {
     debug_enable = true;
