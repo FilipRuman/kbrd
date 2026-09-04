@@ -17,17 +17,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT(
         // left
         LT(_SYMB, KC_ENTER),  KC_Z,      KC_A ,        KC_Q,
-        LCTL_T(KC_F2),      KC_X,       KC_S,        KC_W,
+        LSFT_T(KC_F2),      KC_X,       KC_S,        KC_W,
         LGUI_T(KC_DEL),   KC_C,       KC_D,        KC_E,
-                            KC_V,   KC_F,        KC_R,
+                            KC_V,   LCTL_T(KC_F),        KC_R,
                             KC_B,       RALT_T(KC_G),        LT(_MS, KC_T),
 
         // right
-        KC_ESC,     KC_N,       KC_H,        KC_Y,
-        LT(_FUNC, KC_SPC),  KC_M,       LCTL_T(KC_J),        KC_U,
-        LSFT_T(KC_BSPC),    KC_COMMA,   KC_K,        KC_I,
-                            KC_DOT,     KC_L,        KC_O,
-                            KC_SLASH,   KC_SEMICOLON,KC_P
+        KC_ESC,             KC_N,           KC_H,           KC_Y,
+        LT(_FUNC, KC_SPC),  KC_M,           LCTL_T(KC_J),           KC_U,
+        LSFT_T(KC_BSPC),            KC_COMMA,       KC_K,           KC_I,
+                            KC_DOT,         KC_L,           KC_O,
+                            KC_SLASH,       KC_SEMICOLON,   KC_P
     ),
 
 
